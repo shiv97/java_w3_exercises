@@ -1,10 +1,11 @@
-package arrcnt;
+package indexfind;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Arrcnt 
+public class IndexFind 
 {
-    public static void main(String[] args) 
+        public static void main(String[] args) 
     {
       Scanner sc = new Scanner(System.in);
       System.out.println("Enter the size of the array :: ");
@@ -18,21 +19,21 @@ public class Arrcnt
       int sum=0;
       System.out.print(Arrays.toString(myArray));
       System.out.println();
-      //System.out.println("enter element to be searched:");
-      int srch=-1;
+      System.out.println("enter element to be searched:");
+      int srch=sc.nextInt();
       int present=0;
-      int p=0;
       for(int i=0;i<size;i++)
       {
-          if((srch==myArray[i])||(present==myArray[i]))
+          if(srch==myArray[i])
           {
-              System.out.println("element present in array");
-              p=1;
+              System.out.println("element present in array at index:"+i);
+              present=1;
           }
       }
-      if(p!=1)
+      if(present!=1)
       {
-          System.out.println("element -1, 0 not present in array");
+          System.out.println("element not present in array");
       }
-    }    
+    }   
 }
+    
