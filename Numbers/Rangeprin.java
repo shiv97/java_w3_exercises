@@ -14,6 +14,8 @@ public class Rangeprin
     {
         System.out.print(" "+i);
     }
+    int rand=(int) (ini+(Math.random()*fin));
+    System.out.println("the random no. is:" +rand);
     }
     
 }
